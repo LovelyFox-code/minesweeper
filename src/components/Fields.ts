@@ -22,4 +22,28 @@ export const CellState: Record<string, Cell>={
 
 }
 
-export const emptyFieldGenerator = (size: number, state: Cell = CellState.empty): Field=>[[]]
+export const emptyFieldGenerator = (size: number, state: Cell = CellState.empty
+    ): Field => new Array(size).fill(null).map(() => new Array(size).fill(state));
+
+export const fieldGenerator = (size: number, probability: number): Field => {
+    if(probability < 0 || probability > 1 ){
+        throw new Error('Probability should be between 0 and 1')
+    }
+
+    let unprocessedCells = size * size;
+    let restCellsWithBombs = unprocessedCells * probability;
+    const result: Field = emptyFieldGenerator(size);
+    for(let y = 0; y < size; y++){
+        for(let x = 0; x <size; x++){
+            if(restCellsWithBombs === 0){
+                return result;
+            }
+            if(restCellsWithBombs / unprocessedCells > Math.random()){
+                result[y][x] = CellState.bomb;
+                restCellsWithBombs--;
+            }
+            unprocessedCells--;
+        }
+    }
+    return result;
+}

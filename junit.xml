@@ -1,38 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="1" failures="1" errors="0" time="0.777">
-  <testsuite name="Field Generator" errors="0" failures="1" skipped="0" timestamp="2023-03-23T16:28:21" time="0.728" tests="1">
-    <testcase classname="Field Generator Empty field gnerator test 2*2" name="Field Generator Empty field gnerator test 2*2" time="0.003">
-      <failure>Error: expect(received).toStrictEqual(expected) // deep equality
-
-- Expected  - 8
-+ Received  + 1
-
-  Array [
--   Array [
--     0,
--     0,
--   ],
--   Array [
--     0,
--     0,
--   ],
-+   Array [],
-  ]
-    at Object.&lt;anonymous&gt; (/Users/alinad/Desktop/bench/minesweeper/src/components/Field.test.ts:8:43)
-    at Promise.then.completed (/Users/alinad/Desktop/bench/minesweeper/node_modules/jest-circus/build/utils.js:293:28)
-    at new Promise (&lt;anonymous&gt;)
-    at callAsyncCircusFn (/Users/alinad/Desktop/bench/minesweeper/node_modules/jest-circus/build/utils.js:226:10)
-    at _callCircusTest (/Users/alinad/Desktop/bench/minesweeper/node_modules/jest-circus/build/run.js:297:40)
-    at processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async _runTest (/Users/alinad/Desktop/bench/minesweeper/node_modules/jest-circus/build/run.js:233:3)
-    at async _runTestsForDescribeBlock (/Users/alinad/Desktop/bench/minesweeper/node_modules/jest-circus/build/run.js:135:9)
-    at async _runTestsForDescribeBlock (/Users/alinad/Desktop/bench/minesweeper/node_modules/jest-circus/build/run.js:130:9)
-    at async _runTestsForDescribeBlock (/Users/alinad/Desktop/bench/minesweeper/node_modules/jest-circus/build/run.js:130:9)
-    at async run (/Users/alinad/Desktop/bench/minesweeper/node_modules/jest-circus/build/run.js:68:3)
-    at async runAndTransformResultsToJestFormat (/Users/alinad/Desktop/bench/minesweeper/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
-    at async jestAdapter (/Users/alinad/Desktop/bench/minesweeper/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
-    at async runTestInternal (/Users/alinad/Desktop/bench/minesweeper/node_modules/jest-runner/build/runTest.js:367:16)
-    at async runTest (/Users/alinad/Desktop/bench/minesweeper/node_modules/jest-runner/build/runTest.js:444:34)</failure>
+<testsuites name="jest tests" tests="24" failures="0" errors="0" time="0.627">
+  <testsuite name="Check neigbors selectors" errors="0" failures="0" skipped="0" timestamp="2023-03-30T10:43:10" time="0.49" tests="16">
+    <testcase classname="Check neigbors selectors With [0, 0] coords" name="Check neigbors selectors With [0, 0] coords" time="0.001">
+    </testcase>
+    <testcase classname="Check neigbors selectors should return the correct neighbours for [3, 3] coords" name="Check neigbors selectors should return the correct neighbours for [3, 3] coords" time="0.001">
+    </testcase>
+    <testcase classname="checkItemInField tests Simple cases Out of range" name="checkItemInField tests Simple cases Out of range" time="0">
+    </testcase>
+    <testcase classname="checkItemInField tests Simple cases Out of x range" name="checkItemInField tests Simple cases Out of x range" time="0.001">
+    </testcase>
+    <testcase classname="checkItemInField tests Simple cases In x and y range" name="checkItemInField tests Simple cases In x and y range" time="0">
+    </testcase>
+    <testcase classname="Big field Out of x range" name="Big field Out of x range" time="0">
+    </testcase>
+    <testcase classname="Big field Out of x range with negative index" name="Big field Out of x range with negative index" time="0.001">
+    </testcase>
+    <testcase classname="Big field Out of y range" name="Big field Out of y range" time="0">
+    </testcase>
+    <testcase classname="Big field In x and y range" name="Big field In x and y range" time="0">
+    </testcase>
+    <testcase classname="Check Increment Neibours Simple cases Field with only one item" name="Check Increment Neibours Simple cases Field with only one item" time="0">
+    </testcase>
+    <testcase classname="Check Increment Neibours Simple cases Field 2x2 with one mine" name="Check Increment Neibours Simple cases Field 2x2 with one mine" time="0">
+    </testcase>
+    <testcase classname="Check Increment Neibours Simple cases Field 2x2 with two mines" name="Check Increment Neibours Simple cases Field 2x2 with two mines" time="0">
+    </testcase>
+    <testcase classname="Check Increment Neibours 3x3 cases Field 3x3 with one centered mine" name="Check Increment Neibours 3x3 cases Field 3x3 with one centered mine" time="0">
+    </testcase>
+    <testcase classname="Check Increment Neibours 3x3 cases Field 3x3 with two mines" name="Check Increment Neibours 3x3 cases Field 3x3 with two mines" time="0">
+    </testcase>
+    <testcase classname="Check Increment Neibours 9x9 cases Field 9x9 with 7 mines" name="Check Increment Neibours 9x9 cases Field 9x9 with 7 mines" time="0">
+    </testcase>
+    <testcase classname="Check Increment Neibours 9x9 cases Field 9x9 with 11 mines" name="Check Increment Neibours 9x9 cases Field 9x9 with 11 mines" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="Field Generator" errors="0" failures="0" skipped="0" timestamp="2023-03-30T10:43:11" time="0.057" tests="8">
+    <testcase classname="Field Generator Empty field gnerator tests 2*2" name="Field Generator Empty field gnerator tests 2*2" time="0.001">
+    </testcase>
+    <testcase classname="Field Generator Empty field gnerator tests 3*3" name="Field Generator Empty field gnerator tests 3*3" time="0">
+    </testcase>
+    <testcase classname="Field Generator Empty field gnerator tests 3*3 with hidden state" name="Field Generator Empty field gnerator tests 3*3 with hidden state" time="0">
+    </testcase>
+    <testcase classname="Field Generator Simple cases Smallest possible without mine" name="Field Generator Simple cases Smallest possible without mine" time="0">
+    </testcase>
+    <testcase classname="Field Generator Simple cases Big field without mine" name="Field Generator Simple cases Big field without mine" time="0">
+    </testcase>
+    <testcase classname="Field Generator Simple cases Smallest possible field with mine" name="Field Generator Simple cases Smallest possible field with mine" time="0">
+    </testcase>
+    <testcase classname="Field Generator Simple cases 2*2 field with mines" name="Field Generator Simple cases 2*2 field with mines" time="0.001">
+    </testcase>
+    <testcase classname="Field Generator Simple cases 2*2 field with 50% probability mines" name="Field Generator Simple cases 2*2 field with 50% probability mines" time="0.003">
     </testcase>
   </testsuite>
 </testsuites>
